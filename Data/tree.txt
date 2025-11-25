@@ -1,0 +1,17 @@
+Listagem de caminhos de pasta
+O número de série do volume é 4C48-9AB0
+C:.
+¦   README.md
+¦   tree.txt
+¦   
++---Data
+¦   +---Docs
+¦   ¦       HealthCore_Escopo_MVP.pdf
+¦   ¦       White Paper — Ética, Segurança E Governança _ Health Core (v1.0 – 24_11_2025).pdf
+¦   ¦       
+¦   +---Image
+¦           IA Saude.png
+¦           
++---White Paper
+        white_paper_etica_seguranca_e_governanca_health_core_v_1_0_24_11_2025.md
+        
