@@ -1,7 +1,7 @@
 # Health Care
 
-**O seu histórico de saúde, organizado e inteligente.**  
-O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só lugar e usa IA para **identificar padrões** e **sugerir qual especialista você deve procurar** — **sem diagnóstico** e **sem prescrição**. Segurança e privacidade são o nosso alicerce.
+**Seu histórico de saúde, organizado e inteligente — centrado no paciente.**  
+O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só lugar e usa IA para **organizar informações**, **destacar pontos relevantes** e **sugerir qual especialidade médica procurar** — **sem diagnóstico** e **sem prescrição**. Privacidade e segurança são parte do produto, não um “extra”.
 
 <p align="center">
   <img src="image/ia_saude.png" alt="Health Care — IA na Saúde" width="520">
@@ -17,6 +17,8 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
 - [Health Care](#health-care)
   - [Sumário](#sumário)
   - [Visão em 10 segundos](#visão-em-10-segundos)
+  - [O que é o Health Care](#o-que-é-o-health-care)
+  - [Health Core x Health Care (nomenclatura)](#health-core-x-health-care-nomenclatura)
   - [🔒 Estratégia de Segurança e Repositórios](#-estratégia-de-segurança-e-repositórios)
   - [Diferenciais](#diferenciais)
   - [O que entregaremos no MVP](#o-que-entregaremos-no-mvp)
@@ -24,416 +26,243 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
     - [Painel — Versão Médico (MVP Light)](#painel--versão-médico-mvp-light)
   - [Privacidade, Ética e IA responsável](#privacidade-ética-e-ia-responsável)
   - [Comunidade Health Care (opt-in)](#comunidade-health-care-opt-in)
-  - [Roadmap](#roadmap)
-    - [Fase 0 — Organização do repositório (higiene + segurança)](#fase-0--organização-do-repositório-higiene--segurança)
-    - [Fase 1 — Estrutura Base (Backend + Banco)](#fase-1--estrutura-base-backend--banco)
-    - [Fase 2 — Segurança mínima (autenticação/autorização)](#fase-2--segurança-mínima-autenticaçãoautorização)
-    - [Fase 3 — MVP do MVP (registro manual de saúde)](#fase-3--mvp-do-mvp-registro-manual-de-saúde)
-    - [Fase 4 — Ingestão de dados (upload + OCR)](#fase-4--ingestão-de-dados-upload--ocr)
-    - [Fase 5 — Estruturação (texto → JSON utilizável)](#fase-5--estruturação-texto--json-utilizável)
-    - [Fase 6 — Linha do tempo e insights mínimos](#fase-6--linha-do-tempo-e-insights-mínimos)
-    - [Fase 7 — Exportação e compartilhamento com consentimento](#fase-7--exportação-e-compartilhamento-com-consentimento)
-    - [Fase 8 — Confiabilidade, custos e operação](#fase-8--confiabilidade-custos-e-operação)
-    - [Próximas fases (pós-MVP)](#próximas-fases-pós-mvp)
   - [Mercado \& Tese](#mercado--tese)
   - [Pitch (1 frase)](#pitch-1-frase)
   - [Modelo de Capitalização (do MVP à Plataforma)](#modelo-de-capitalização-do-mvp-à-plataforma)
     - [Camada 1 — B2C (porta de entrada e recorrência)](#camada-1--b2c-porta-de-entrada-e-recorrência)
-    - [Camada 2 — B2B2C (ticket maior via “pré-consulta”)](#camada-2--b2b2c-ticket-maior-via-pré-consulta)
+    - [Camada 2 — B2B2C (ticket maior via pré-consulta)](#camada-2--b2b2c-ticket-maior-via-pré-consulta)
     - [Camada 3 — Plataforma (infraestrutura e escala)](#camada-3--plataforma-infraestrutura-e-escala)
   - [Cenários de Evolução (Conservador, Base e Otimista)](#cenários-de-evolução-conservador-base-e-otimista)
     - [Cenário 1 — Conservador (B2C forte, crescimento orgânico)](#cenário-1--conservador-b2c-forte-crescimento-orgânico)
-    - [Cenário 2 — Base (B2C + pilotos B2B2C em paralelo)](#cenário-2--base-b2c--pilotos-b2b2c-em-paralelo)
+    - [Cenário 2 — Base (B2C + pilotos B2B2C)](#cenário-2--base-b2c--pilotos-b2b2c)
     - [Cenário 3 — Otimista (B2B2C escala + Plataforma/Integrações)](#cenário-3--otimista-b2b2c-escala--plataformaintegrações)
   - [O que buscamos agora](#o-que-buscamos-agora)
-  - [Roadmap Comercial (para investidores)](#roadmap-comercial-para-investidores)
-    - [Fase A — MVP de Valor (0 → 1)](#fase-a--mvp-de-valor-0--1)
-    - [Fase B — Recomendação de Especialidade com Guardrails (1 → 10)](#fase-b--recomendação-de-especialidade-com-guardrails-1--10)
-    - [Fase C — Go-to-Market e Monetização Inicial (10 → 100)](#fase-c--go-to-market-e-monetização-inicial-10--100)
-    - [Fase D — Trust \& Compliance como vantagem competitiva (100 → 1000)](#fase-d--trust--compliance-como-vantagem-competitiva-100--1000)
-    - [Fase E — Escala, Integrações e Eficiência (1000+)](#fase-e--escala-integrações-e-eficiência-1000)
+  - [Por que o Health Care não compete com ERPs de Saúde ou Plataformas como Laboratórios](#por-que-o-health-care-não-compete-com-erps-de-saúde-ou-plataformas-como-laboratórios)
+    - [Health Care ≠ ERP de Saúde (ex.: TOTVS)](#health-care--erp-de-saúde-ex-totvs)
+    - [Health Care ≠ plataforma de laboratório (ex.: Dasa)](#health-care--plataforma-de-laboratório-ex-dasa)
+    - [Neutralidade como diferencial](#neutralidade-como-diferencial)
+  - [Roadmap (para investidores)](#roadmap-para-investidores)
+  - [Roadmap Técnico](#roadmap-técnico)
+    - [Fase 0 — Organização do repositório](#fase-0--organização-do-repositório)
+    - [Fase 1 — Estrutura Base (Backend + Banco)](#fase-1--estrutura-base-backend--banco)
+    - [Fase 2 — Segurança mínima (authn/authz)](#fase-2--segurança-mínima-authnauthz)
+    - [Fase 3 — Registro manual (MVP do MVP)](#fase-3--registro-manual-mvp-do-mvp)
+    - [Fase 4 — Upload + OCR](#fase-4--upload--ocr)
+    - [Fase 5 — Estruturação (texto → JSON)](#fase-5--estruturação-texto--json)
+    - [Fase 6 — Timeline + insights](#fase-6--timeline--insights)
+    - [Fase 7 — Exportação + consentimento](#fase-7--exportação--consentimento)
+    - [Fase 8 — Operação (confiabilidade e custos)](#fase-8--operação-confiabilidade-e-custos)
+    - [Pós-MVP](#pós-mvp)
   - [Estrutura do repositório](#estrutura-do-repositório)
 
 ---
 
 ## Visão em 10 segundos
-> **“Health Care organiza seu histórico de saúde e usa IA para te alertar quando algo no seu exame merece atenção e qual especialista você deve procurar.”**  
-Simples. Forte. Direto.
+> **“O Health Care organiza seu histórico de saúde, transforma documentos em uma timeline clara e sugere qual especialidade procurar — com privacidade por padrão (sem diagnóstico e sem prescrição).”**
+
+---
+
+## O que é o Health Care
+- Um lugar único para **juntar e organizar** documentos de saúde (PDF/foto).
+- Uma **timeline** clara para acompanhar evolução ao longo do tempo.
+- IA para **sumarizar e estruturar** informações e **sugerir especialidade** (sem diagnóstico/prescrição).
+- Compartilhamento com médico **só com consentimento**, com escopo, prazo e revogação.
+
+---
+
+## Health Core x Health Care (nomenclatura)
+Você pode ver “**Health Core**” em alguns arquivos (PDFs/white paper) porque foi um **nome anterior do projeto**.  
+O produto e a marca atual são **Health Care**. Estamos padronizando isso aos poucos sem quebrar nomes de arquivos e links existentes.
 
 ---
 
 ## 🔒 Estratégia de Segurança e Repositórios
+Para reduzir risco e evitar exposição de código sensível/segredos, adotamos dois repositórios:
 
-Para reduzir risco e evitar exposição desnecessária de código e segredos, adotamos uma estratégia de dois repositórios:
-
-- **Health-Care (este — público):** documentação, White Paper, roadmap, materiais e transparência.
+- **Health-Care (este — público):** documentação, White Paper, roadmap e materiais de transparência.
 - **Health-Care-Develop (privado):** desenvolvimento principal (backend, frontend e IA), com controles de acesso.
 
-**Como contribuir:**  
-- Sugestões, melhorias e bugs: use a aba **Issues** deste repositório público.  
+**Como contribuir**
+- Sugestões, melhorias e bugs: use **Issues** neste repositório público.
 - Contribuições de código: via PR no repositório privado (processo guiado pelos mantenedores).
-
-> Observação: este repositório público pode conter arquivos de apoio/rascunhos e PoCs — mas **não é** o “código de produção”.
 
 ---
 
 ## Diferenciais
-- **Histórico completo** do paciente, não só exames isolados.  
-- **IA orientada para especialidades** (sem diagnóstico, sem prescrição).  
-- **Privacidade por padrão** — dados pertencem 100% ao paciente.  
-- **Acesso médico com consentimento** e escopos limitados.  
-- **White Paper público** de ética, segurança e governança.
+- **Histórico longitudinal** (não só exames isolados).
+- **IA orientada à ação segura**: organizar, sumarizar e sugerir especialidade — sem diagnóstico.
+- **Privacidade por padrão**: dados pertencem ao paciente, com consentimento explícito.
+- **Transparência**: White Paper público de ética, segurança e governança.
 
 ---
 
 ## O que entregaremos no MVP
 
 ### App — Versão Paciente
-- **Central de Saúde Pessoal:** alergias, doenças crônicas, cirurgias, medicamentos de uso contínuo (registro).  
-- **Upload inteligente de exames:** foto/PDF → OCR → extração de campos essenciais → organização automática.  
-- **Linha do tempo médica:** visão cronológica + evolução simples.  
-- **Insights seguros:** detecção de padrões e **sugestão de especialidades** (ex.: cardiologia, endocrino).  
-- **Alertas preventivos:** lembretes de acompanhamento, nada alarmista.  
-- **Exportação rápida para consulta:** PDF com últimos exames e resumo.
+- Cadastro do histórico (alergias, crônicos, cirurgias, medicamentos).
+- Upload de exame/laudo (PDF/foto) → OCR quando necessário → estruturação básica.
+- Timeline + busca/filtros.
+- Insights seguros (padrões simples) + sugestão de especialidade.
+- Exportação rápida (resumo para consulta).
 
 ### Painel — Versão Médico (MVP Light)
-- **Acesso concedido pelo paciente** (revogável, com prazo e escopo).  
-- **Dashboard clínico resumido:** alergias, condições crônicas, cirurgias, últimos exames.  
-- **Sumarização de laudos por IA** para facilitar a consulta (sem decidir conduta).
+- Acesso **concedido pelo paciente** (revogável, com prazo e escopo).
+- Visão resumida: alergias, crônicos, cirurgias, últimos exames.
+- Sumarização de laudos por IA para facilitar consulta (sem decidir conduta).
 
 ---
 
 ## Privacidade, Ética e IA responsável
-- **Sem venda de dados.**  
-- **Sem compartilhamento com convênios/seguradoras** para precificação, negação de cobertura ou perfil de risco.  
-- **Criptografia forte** (em trânsito e em repouso).  
-- **Separação de dados pessoais x dados clínicos.**  
-- **Auditoria e transparência:** histórico de acessos quando houver compartilhamento.  
-- **IA com limites claros:** sem diagnóstico, sem prescrição, linguagem clara e não alarmista.
-
-> Detalhes completos no nosso **White Paper** abaixo.
+- **Sem venda de dados.**
+- **Sem uso por convênios/seguradoras** para precificação, negação de cobertura ou perfil de risco.
+- Criptografia (em trânsito e em repouso), logs sem PII e trilha de auditoria quando houver compartilhamento.
+- IA com limites claros: linguagem não alarmista, sem urgência clínica, sem diagnóstico/prescrição.
 
 ---
 
 ## Comunidade Health Care (opt-in)
-Ajude você e o próximo a ter mais saúde 💙  
-Ao optar por compartilhar **dados anonimizados** para treinar/avaliar melhorias (modo Comunidade), você:
+Modo opcional para compartilhar **dados anonimizados** para avaliar melhorias e qualidade do produto.
 
-- Recebe o **selo “Comunidade Health Care”**  
-- Ganha **tema visual exclusivo** e **acesso antecipado** a recursos  
-- Obtém **insights extras** e relatórios mais ricos
-
-**Importante:**  
-- Você pode **entrar ou sair a qualquer momento**.  
-- **Nunca** compartilhamos dados individuais com convênios/seguradoras para precificação.  
-- Avaliamos **Federated Learning** e **Differential Privacy** no roadmap para proteger ainda mais sua privacidade.
-
----
-
-## Roadmap
-
-> Abaixo está um roadmap **mais completo**, com **novas etapas** e **subetapas menores**.  
-> (Sem diagnóstico e sem prescrição: o produto sugere especialidade e organiza dados.)
-
-### Fase 0 — Organização do repositório (higiene + segurança)
-- **0.1** Remover/evitar versionar ambientes virtuais (`env*`, `.venv`) e cache (`__pycache__`)
-- **0.2** Padronizar nomes (ex.: `README.md` em vez de `readme.md`, se você quiser)
-- **0.3** Criar arquivos básicos de governança:
-  - `LICENSE.txt`
-  - `SECURITY.md` (como reportar vulnerabilidades)
-  - `CHANGELOG.md` (mudanças relevantes)
-- **0.4** Checklist LGPD (requisitos não-funcionais):
-  - retenção/deleção
-  - logs sem PII
-  - consentimento auditável
-
-### Fase 1 — Estrutura Base (Backend + Banco)
-- **1.1** Estrutura do backend (FastAPI) e organização de módulos
-- **1.2** Banco PostgreSQL + migrações (ex.: Alembic)
-- **1.3** Modelos iniciais:
-  - `User`
-  - `HealthRecord`
-- **1.4** Padrão de erros e validações (422/400/401/403/404)
-- **1.5** Testes mínimos (smoke + integração simples)
-
-### Fase 2 — Segurança mínima (autenticação/autorização)
-- **2.1** Registro e login
-- **2.2** JWT e proteção de rotas
-- **2.3** Autorização por proprietário do dado (user só acessa o que é dele)
-- **2.4** Rate limit (login/upload) e proteção anti-bruteforce
-- **2.5** Auditoria mínima (eventos de login e acesso a registros)
-
-### Fase 3 — MVP do MVP (registro manual de saúde)
-- **3.1** CRUD de `HealthRecord` (manual)
-  - criar / listar / detalhar / atualizar (opcional) / deletar
-- **3.2** Paginação e filtros (por data/tipo/tag)
-- **3.3** Linha de base de qualidade:
-  - validação de datas
-  - limites de texto
-  - padronização de unidades (quando aplicável)
-- **3.4** Exportação simples (JSON) para conferência do paciente
-
-### Fase 4 — Ingestão de dados (upload + OCR)
-- **4.1** Endpoint de upload (PDF/Imagem) com:
-  - limite de tamanho
-  - validação de MIME
-- **4.2** Armazenamento seguro (estrutura de pastas/bucket futuro)
-- **4.3** OCR básico (texto bruto)
-- **4.4** Persistir artefatos e metadados:
-  - hash do arquivo
-  - data de envio
-  - status do processamento
-- **4.5** Tratamento de falhas e reprocessamento
-
-### Fase 5 — Estruturação (texto → JSON utilizável)
-- **5.1** Limpeza do texto (remoção de ruído)
-- **5.2** Extração de campos mínimos (exame/valor/unidade/data)
-- **5.3** Validação do JSON (schema + sanity checks)
-- **5.4** Revisão pelo paciente (“confirmar/corrigir antes de salvar”)
-- **5.5** Versionamento do parser (rastrear mudanças)
-
-### Fase 6 — Linha do tempo e insights mínimos
-- **6.1** Linha do tempo (ordenação + agrupamento)
-- **6.2** Regras simples para **sugestão de especialidade**
-- **6.3** Explicabilidade do insight (“por que sugeriu”)
-- **6.4** Guardrails de linguagem (não alarmista; sem urgência clínica)
-
-### Fase 7 — Exportação e compartilhamento com consentimento
-- **7.1** Consentimento explícito (escopo + prazo + revogação)
-- **7.2** Trilha de auditoria de acessos
-- **7.3** Exportação para consulta (PDF/resumo)
-- **7.4** Acesso “somente leitura” para médico (MVP Light)
-
-### Fase 8 — Confiabilidade, custos e operação
-- **8.1** Jobs assíncronos (fila) para OCR/estruturação (quando necessário)
-- **8.2** Observabilidade (logs/métricas) sem dados sensíveis
-- **8.3** Backups + restore testado
-- **8.4** Política de retenção e deleção (LGPD-friendly)
-
-### Próximas fases (pós-MVP)
-- Integração com laboratórios (com consentimento)
-- Importação automatizada de exames
-- IA avançada e explicabilidade mais rica
-- Expansão internacional (conformidades locais)
-
-**Status atual:** foco em **Fase 1 — Estrutura Base**.
+- Você entra e sai quando quiser.
+- Nunca compartilhamos dados individuais com convênios/seguradoras para precificação.
+- Avaliamos técnicas como **Federated Learning** e **Differential Privacy** no roadmap.
 
 ---
 
 ## Mercado & Tese
-
-**O problema (hoje):**
-- O histórico de saúde do paciente é **fragmentado** (PDFs, fotos, apps diferentes, pastas no WhatsApp/e-mail).
-- Em consultas, tempo é perdido “reconstruindo contexto” (exames antigos, comorbidades, alergias, medicamentos).
-- Mesmo pacientes organizados sofrem com **baixa continuidade** do cuidado (documentos dispersos, troca de médicos, mudança de cidade/convênio).
-
-**A tese do Health Care:**
-- A maior alavanca inicial não é “diagnosticar” — é **organizar, sumarizar e tornar acionável** o histórico do paciente.
-- **Sugestão de especialidade** (com guardrails) reduz fricção: ajuda o usuário a escolher o próximo passo sem prometer conduta clínica.
-- “Trust” (privacidade + transparência) deixa de ser custo e vira **diferencial competitivo**, especialmente em saúde.
-
-**Por que agora:**
-- Usuários estão mais acostumados a digitalizar documentos (PDF/foto) e esperar experiências “inteligentes”.
-- Modelos e pipelines de extração/estruturação evoluíram, permitindo entregar valor sem invadir o domínio de diagnóstico.
-- Reguladores e o mercado pressionam por **governança, auditoria e consentimento** — o que favorece soluções privacy-by-design.
-
-**Hipóteses de monetização (em validação):**
-- **B2C:** assinatura para organização + timeline + exportações + insights básicos.
-- **B2B2C:** clínicas/telemed com “pré-consulta” (intake) e resumo estruturado para apoiar a consulta.
-- Upsell por recursos premium: múltiplos perfis familiares, armazenamento ampliado, exportações avançadas, integrações.
+**Problema:** o histórico de saúde do paciente é fragmentado (PDFs, fotos, e-mails, apps diferentes). Em consulta, tempo é perdido reconstruindo contexto.  
+**Tese:** valor real começa em **organizar e tornar o histórico acionável**, com confiança, governança e consentimento — sem “invadir” diagnóstico.  
+**Por que agora:** digitalização de documentos e maturidade de pipelines de extração/estruturação permitem entregar valor com limites claros.
 
 ---
-## Pitch (1 frase)
 
-**Uma plataforma de infraestrutura de dados de saúde centrada no paciente** — que organiza histórico (exames, laudos, alergias, cirurgias), gera uma timeline inteligente e sugere **qual especialidade procurar**, com privacidade por padrão (**sem diagnóstico** e **sem prescrição**).
+## Pitch (1 frase)
+**Uma plataforma de infraestrutura de dados de saúde centrada no paciente** — que organiza histórico, cria uma timeline inteligente e sugere qual especialidade procurar, com privacidade por padrão (**sem diagnóstico** e **sem prescrição**).
 
 ---
 
 ## Modelo de Capitalização (do MVP à Plataforma)
-
-A capitalização do Health Care é pensada em camadas — começamos com valor imediato no B2C e escalamos com B2B2C e plataforma, mantendo o princípio de **dados pertencem ao paciente** e **compartilhamento só com consentimento**.
+A monetização evolui em camadas: começamos com valor direto para o público geral e escalamos com parceiros e integrações.
 
 ### Camada 1 — B2C (porta de entrada e recorrência)
-**O que é:** app para o público geral organizar o histórico de saúde e transformar documentos soltos em informação utilizável.  
-**Como monetiza:**
-- **Assinatura (mensal/anual)** com freemium (limites no plano gratuito)
-- **Planos família** (múltiplos perfis)
-- Upsell por conveniência: exportações avançadas, armazenamento, automações
+- Assinatura (mensal/anual) com freemium (limites no gratuito).
+- Planos família (múltiplos perfis).
+- Upsell: exportações avançadas, automações, armazenamento e reprocessamento.
 
-**Por que funciona:** histórico acumulado cria **lock-in** (quanto mais o usuário usa, mais valioso fica).
-
-### Camada 2 — B2B2C (ticket maior via “pré-consulta”)
-**O que é:** módulo para clínicas/telemed/profissionais com **pré-consulta estruturada** e **resumo do histórico** para apoiar atendimento (sem conduta).  
-**Como monetiza:**
-- Licença por profissional/clínica, ou
-- Cobrança por consulta/paciente ativo, ou
-- Pacotes de pilotos (design partners) com contrato recorrente
-
-**Por que funciona:** gera ROI operacional (tempo de consulta + qualidade do contexto clínico).
+### Camada 2 — B2B2C (ticket maior via pré-consulta)
+- Módulo “pré-consulta + resumo do histórico” para clínicas/telemed.
+- Cobrança por assento, por consulta ou por paciente ativo (pilotos → recorrência).
 
 ### Camada 3 — Plataforma (infraestrutura e escala)
-**O que é:** infraestrutura de **ingestão + estruturação + governança/consentimento**, podendo evoluir para integrações e APIs.  
-**Como monetiza:**
-- Modelo **usage-based** (por volume de documentos/processamento)
-- Contratos enterprise (SLA, auditoria, compliance)
-- Integrações com parceiros (sempre com consentimento do paciente)
+- Integrações e APIs (ingestão, estruturação, consentimento, auditoria).
+- Cobrança por uso (volume de documentos/processamento) e contratos enterprise.
 
-**Por que funciona:** transforma o Health Care em “camada de confiança” do histórico do paciente — com defensabilidade em privacidade e governança.
-
-> Nota: esta seção descreve **possibilidades estratégicas** do produto completo. Não são projeções financeiras nem promessa de resultados.
+> Nota: isto descreve possibilidades estratégicas do produto completo (não é promessa financeira).
 
 ---
 
 ## Cenários de Evolução (Conservador, Base e Otimista)
 
-Abaixo estão cenários ilustrativos para mostrar **como o Health Care pode se capitalizar ao longo do roadmap**, do MVP ao produto completo.
-
 ### Cenário 1 — Conservador (B2C forte, crescimento orgânico)
-**Tese:** crescimento sustentado no público geral, com monetização principalmente por assinatura.  
-**Como capitaliza:**
-- Freemium → Pro (assinatura)
-- Planos família como principal alavanca de ARPU
-- Crescimento via conteúdo, indicação e comunidades
+- Receita principalmente por assinatura + planos família.
+- Foco em retenção e valor recorrente (timeline + exportação pré-consulta).
 
-**O que precisa provar (métricas de produto):**
-- Ativação: usuário sobe documentos e volta para consultar/exportar
-- Retenção (D30) crescente conforme a timeline fica “completa”
-- Uso recorrente de exportação para consultas
-
-**Riscos:** CAC pode subir; mitigação via orgânico + referral + parcerias leves.
-
-### Cenário 2 — Base (B2C + pilotos B2B2C em paralelo)
-**Tese:** B2C valida valor e gera volume; B2B2C começa a gerar ticket maior e previsibilidade.  
-**Como capitaliza:**
-- Assinatura B2C como base
-- Pilotos pagos com clínicas/telemed (pré-consulta + resumo)
-- Pacotes recorrentes por volume/assento em parceiros iniciais
-
-**O que precisa provar:**
-- B2C: retenção + adoção do “resumo pré-consulta”
-- B2B2C: redução de tempo de intake / maior satisfação do profissional
-- Repetição do uso em clínicas (recorrência real)
-
-**Riscos:** ciclo de venda B2B2C; mitigação via pilotos curtos e proposta de ROI clara.
+### Cenário 2 — Base (B2C + pilotos B2B2C)
+- B2C valida e cria base.
+- Pilotos pagos com clínicas/telemed provam ROI e abrem caminho para contratos.
 
 ### Cenário 3 — Otimista (B2B2C escala + Plataforma/Integrações)
-**Tese:** Health Care vira referência de **histórico estruturado + governança**, escalando via parceiros e integrações.  
-**Como capitaliza:**
-- B2B2C escalado (contratos recorrentes)
-- Integrações e “plugs” (telemed, laboratórios, ecossistema)
-- Plataforma/API com cobrança por uso (documentos/processamento)
-
-**O que precisa provar:**
-- Unit economics positivos (custo por documento controlado vs receita por volume)
-- Segurança/privacidade como diferencial percebido (confiança e auditoria)
-- Escalabilidade operacional (fila, reprocessamento, qualidade contínua)
-
-**Riscos:** maior exigência de compliance e qualidade; mitigação com privacy-by-design desde o início.
+- Contratos recorrentes com parceiros + integrações.
+- Plataforma usage-based com governança/consentimento como diferencial.
 
 ---
 
 ## O que buscamos agora
-
-Estamos construindo o Health Care com foco em **valor rápido para o paciente** e **confiança para o ecossistema**. No curto prazo, buscamos:
-
-- **Design Partners (pilotos):** clínicas, telemed e profissionais que queiram testar o “pré-consulta + resumo” (MVP Light) com feedback estruturado.
-- **Primeiros usuários (beta):** pessoas dispostas a usar o app, subir documentos e avaliar a utilidade da timeline e da sugestão de especialidade.
-- **Parcerias estratégicas:** laboratórios, plataformas de telemed, healthtechs complementares (integrações futuras, sempre com consentimento).
-- **Apoio de investidores (pré-seed/seed):** para acelerar produto, segurança e go-to-market.
-
-**O que oferecemos em troca (nesta fase):**
-- Acesso antecipado ao roadmap e demos
-- Canal direto com o time para priorização (feedback com impacto real)
-- Transparência: métricas do beta, aprendizados e evolução do produto
-
-> Se você quer participar como **Design Partner**, abra uma Issue com o título: **[Design Partner] Nome / Tipo (clínica, telemed, etc.)**.
+- **Usuários beta (público geral):** para validar uso real de upload, timeline e exportação.
+- **Design partners (pilotos):** clínicas/telemed interessadas no módulo de pré-consulta e resumo.
+- **Parcerias estratégicas:** integrações futuras (sempre com consentimento).
+- **Investimento (pré-seed/seed):** para acelerar produto, segurança e go-to-market.
 
 ---
 
-## Roadmap Comercial (para investidores)
+## Por que o Health Care não compete com ERPs de Saúde ou Plataformas como Laboratórios
+Atuamos em camadas diferentes da cadeia de valor: **institucional** vs **centrado no paciente**.
 
-Este roadmap traduz a evolução do Health Care em **marcos de valor, tração e monetização**, com métricas sugeridas para acompanhamento.
+### Health Care ≠ ERP de Saúde (ex.: TOTVS)
+**ERPs/prontuários** são sistemas internos de clínicas/hospitais (agenda, faturamento, convênios, operação e prontuário).  
+**Health Care** organiza o histórico do paciente ao longo da vida, atravessando instituições e facilitando o compartilhamento consentido.
 
-> Reforço: o Health Care **não faz diagnóstico**, **não prescreve** e **não decide conduta**. O foco é **organizar**, **sumarizar** e **sugerir especialidade** com linguagem segura e guardrails.
+> Se o ERP é o sistema operacional da clínica, o Health Care é o sistema operacional do paciente.
 
-### Fase A — MVP de Valor (0 → 1)
-**Objetivo:** provar que o usuário consegue centralizar documentos e obter uma timeline confiável.
+### Health Care ≠ plataforma de laboratório (ex.: Dasa)
+Plataformas laboratoriais organizam muito bem os exames feitos no próprio ecossistema.  
+O Health Care organiza **toda a vida clínica do paciente**, inclusive dados de fora: PDFs antigos, fotos, laudos, cirurgias, alergias e medicamentos.
 
-**Entregáveis**
-- Upload de PDF/imagem + OCR quando necessário  
-- Timeline e busca/filtros (por tipo, data, tags)  
-- Exportação de resumo para consulta (PDF/JSON)
+> Timeline de laboratório é timeline de fornecedor. O Health Care é a timeline da vida do paciente.
 
-**Métricas sugeridas**
-- Ativação: % de usuários que sobem ≥ 3 documentos na 1ª semana  
-- Tempo “documento → timeline” (p50/p95)  
-- Qualidade: % de documentos com data + tipo + campos mínimos extraídos  
-- Retenção D7/D30
+### Neutralidade como diferencial
+Não somos laboratório, clínica ou operadora. Isso permite neutralidade, governança e confiança — com consentimento explícito e auditável.
 
-### Fase B — Recomendação de Especialidade com Guardrails (1 → 10)
-**Objetivo:** aumentar valor percebido com sugestão rastreável e segura.
+---
 
-**Entregáveis**
-- Sugestão de especialidade (regras + IA)  
-- Explicabilidade (“por que sugeriu?”) baseada nos documentos do usuário  
-- Feedback loop (“foi útil?” / “qual especialidade você procurou?”)  
-- Controles de linguagem: não alarmista, sem urgência clínica
+## Roadmap (para investidores)
+Marcos de produto e tração — do MVP ao produto completo.
 
-**Métricas sugeridas**
-- Adoção da recomendação (% de usuários que visualizam/confirmam)  
-- Taxa de “útil” por recomendação  
-- Taxa de contestação (“não faz sentido”)  
-- Redução do tempo até “decidir o próximo passo” (auto-relato)
+- **Fase A — MVP de Valor (0 → 1):** upload + timeline + exportação pré-consulta.
+- **Fase B — Especialidade com Guardrails (1 → 10):** sugestão rastreável + explicabilidade + feedback loop.
+- **Fase C — Monetização Inicial (10 → 100):** assinatura B2C + pilotos B2B2C (pré-consulta/resumo).
+- **Fase D — Trust & Compliance (100 → 1.000):** auditoria, consentimento, retenção/deleção (LGPD-friendly), governança de IA.
+- **Fase E — Escala e Integrações (1.000+):** integrações e APIs, otimização de custo por documento, eficiência operacional.
 
-### Fase C — Go-to-Market e Monetização Inicial (10 → 100)
-**Objetivo:** validar canal e disposição a pagar.
+---
 
-**Estratégia de packaging (exemplo)**
-- **B2C (assinatura):** organização + timeline + exportação + insights básicos  
-- **B2B2C (clínicas/telemed):** intake pré-consulta + resumo estruturado (sem conduta)
+## Roadmap Técnico
 
-**Métricas sugeridas**
-- Conversão waitlist → cadastro → upload  
-- Conversão free → pago  
-- CAC (teste) e payback (estimado)  
-- NPS / satisfação
+### Fase 0 — Organização do repositório
+- Higiene: ignorar env/cache, padronizar nomes, e arquivos de governança (LICENSE/SECURITY/CHANGELOG).
+- Checklist LGPD: retenção/deleção, logs sem PII, consentimento auditável.
 
-### Fase D — Trust & Compliance como vantagem competitiva (100 → 1000)
-**Objetivo:** tornar privacidade/segurança uma alavanca para parcerias.
+### Fase 1 — Estrutura Base (Backend + Banco)
+- FastAPI organizado por módulos + PostgreSQL + migrações.
+- Modelos iniciais (`User`, `HealthRecord`) + validações + testes mínimos.
 
-**Entregáveis**
-- Trilhas de consentimento (escopo/prazo/revogação) + auditoria  
-- Política de retenção/deleção (LGPD-friendly)  
-- Hardening e observabilidade sem PII  
-- Governança de IA (avaliação, logs de decisão, limites)
+### Fase 2 — Segurança mínima (authn/authz)
+- Registro/login + JWT.
+- Autorização por proprietário do dado + rate limit e auditoria mínima.
 
-**Métricas sugeridas**
-- Incidentes (meta: 0) + tempo de resposta (simulado)  
-- % de logs sem PII (meta: 100%)  
-- Taxa de consentimento para compartilhamento com médico  
-- Sucesso em auditorias internas/checklists
+### Fase 3 — Registro manual (MVP do MVP)
+- CRUD de HealthRecord (manual) + paginação/filtros.
+- Exportação simples (JSON) para conferência do paciente.
 
-### Fase E — Escala, Integrações e Eficiência (1000+)
-**Objetivo:** reduzir fricção e otimizar unit economics por documento.
+### Fase 4 — Upload + OCR
+- Upload PDF/imagem com validações e limites.
+- OCR básico + metadados (hash, status, data) + reprocessamento.
 
-**Entregáveis**
-- Integrações (laboratórios/telemed) **com consentimento**  
-- Importação automatizada (drive/e-mail) com trilha auditável  
-- Otimização de custos (OCR/IA), fila e reprocessamento  
-- Qualidade contínua (datasets sintéticos/anonimizados, testes de regressão)
+### Fase 5 — Estruturação (texto → JSON)
+- Limpeza de texto + extração de campos mínimos + schema/sanity checks.
+- Revisão pelo paciente antes de salvar + versionamento do parser.
 
-**Métricas sugeridas**
-- Custo por documento processado (OCR/IA)  
-- Falhas/reprocessamento (%)  
-- Latência p95 do pipeline  
-- Retenção e expansão (multi-perfil familiar, etc.)
+### Fase 6 — Timeline + insights
+- Timeline (ordenação/agrupamento).
+- Regras simples de sugestão de especialidade + explicabilidade + guardrails.
+
+### Fase 7 — Exportação + consentimento
+- Consentimento explícito (escopo/prazo/revogação) + trilha de auditoria.
+- Exportação para consulta + acesso read-only no painel médico.
+
+### Fase 8 — Operação (confiabilidade e custos)
+- Jobs/fila para OCR/estruturação.
+- Observabilidade sem dados sensíveis + backups/restore testado.
+- Política de retenção e deleção.
+
+### Pós-MVP
+- Importação automatizada, integrações (com consentimento), IA mais rica com explicabilidade e expansão por conformidade local.
+
+**Status atual:** foco em **Fase 1 — Estrutura Base**.
 
 ---
 
 ## Estrutura do repositório
-
-> A árvore abaixo reflete a estrutura do seu `tree.txt`, mas **omitindo a listagem interna do `env31210/`** para não poluir o README.
-
 ```text
 C:.
 ├── .gitignore
