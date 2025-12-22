@@ -95,4 +95,11 @@ htmlcov/
 # Outros
 # =========================
 node_modules/
-*.txt
+
+# =========================
+# Ignorar apenas TXT gerados automaticamente
+# =========================
+logs/*.txt
+tmp/*.txt
+data_raw/*.txt
+ocr_output/*.txt
