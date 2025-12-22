@@ -95,3 +95,4 @@ htmlcov/
 # Outros
 # =========================
 node_modules/
+*.txt
