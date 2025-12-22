@@ -103,6 +103,7 @@ logs/*.txt
 tmp/*.txt
 data_raw/*.txt
 ocr_output/*.txt
+conhecimento/
 
 #git rm -r --cached .
 #git add .
