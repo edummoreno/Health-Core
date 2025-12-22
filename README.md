@@ -35,6 +35,14 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
     - [Fase 7 — Exportação e compartilhamento com consentimento](#fase-7--exportação-e-compartilhamento-com-consentimento)
     - [Fase 8 — Confiabilidade, custos e operação](#fase-8--confiabilidade-custos-e-operação)
     - [Próximas fases (pós-MVP)](#próximas-fases-pós-mvp)
+  - [Mercado \& Tese](#mercado--tese)
+  - [O que buscamos agora](#o-que-buscamos-agora)
+  - [Roadmap Comercial (para investidores)](#roadmap-comercial-para-investidores)
+    - [Fase A — MVP de Valor (0 → 1)](#fase-a--mvp-de-valor-0--1)
+    - [Fase B — Recomendação de Especialidade com Guardrails (1 → 10)](#fase-b--recomendação-de-especialidade-com-guardrails-1--10)
+    - [Fase C — Go-to-Market e Monetização Inicial (10 → 100)](#fase-c--go-to-market-e-monetização-inicial-10--100)
+    - [Fase D — Trust \& Compliance como vantagem competitiva (100 → 1000)](#fase-d--trust--compliance-como-vantagem-competitiva-100--1000)
+    - [Fase E — Escala, Integrações e Eficiência (1000+)](#fase-e--escala-integrações-e-eficiência-1000)
   - [Estrutura do repositório](#estrutura-do-repositório)
 
 ---
@@ -200,6 +208,128 @@ Ao optar por compartilhar **dados anonimizados** para treinar/avaliar melhorias 
 - Expansão internacional (conformidades locais)
 
 **Status atual:** foco em **Fase 1 — Estrutura Base**.
+
+---
+
+## Mercado & Tese
+
+**O problema (hoje):**
+- O histórico de saúde do paciente é **fragmentado** (PDFs, fotos, apps diferentes, pastas no WhatsApp/e-mail).
+- Em consultas, tempo é perdido “reconstruindo contexto” (exames antigos, comorbidades, alergias, medicamentos).
+- Mesmo pacientes organizados sofrem com **baixa continuidade** do cuidado (documentos dispersos, troca de médicos, mudança de cidade/convênio).
+
+**A tese do Health Care:**
+- A maior alavanca inicial não é “diagnosticar” — é **organizar, sumarizar e tornar acionável** o histórico do paciente.
+- **Sugestão de especialidade** (com guardrails) reduz fricção: ajuda o usuário a escolher o próximo passo sem prometer conduta clínica.
+- “Trust” (privacidade + transparência) deixa de ser custo e vira **diferencial competitivo**, especialmente em saúde.
+
+**Por que agora:**
+- Usuários estão mais acostumados a digitalizar documentos (PDF/foto) e esperar experiências “inteligentes”.
+- Modelos e pipelines de extração/estruturação evoluíram, permitindo entregar valor sem invadir o domínio de diagnóstico.
+- Reguladores e o mercado pressionam por **governança, auditoria e consentimento** — o que favorece soluções privacy-by-design.
+
+**Hipóteses de monetização (em validação):**
+- **B2C:** assinatura para organização + timeline + exportações + insights básicos.
+- **B2B2C:** clínicas/telemed com “pré-consulta” (intake) e resumo estruturado para apoiar a consulta.
+- Upsell por recursos premium: múltiplos perfis familiares, armazenamento ampliado, exportações avançadas, integrações.
+
+---
+
+## O que buscamos agora
+
+Estamos construindo o Health Care com foco em **valor rápido para o paciente** e **confiança para o ecossistema**. No curto prazo, buscamos:
+
+- **Design Partners (pilotos):** clínicas, telemed e profissionais que queiram testar o “pré-consulta + resumo” (MVP Light) com feedback estruturado.
+- **Primeiros usuários (beta):** pessoas dispostas a usar o app, subir documentos e avaliar a utilidade da timeline e da sugestão de especialidade.
+- **Parcerias estratégicas:** laboratórios, plataformas de telemed, healthtechs complementares (integrações futuras, sempre com consentimento).
+- **Apoio de investidores (pré-seed/seed):** para acelerar produto, segurança e go-to-market.
+
+**O que oferecemos em troca (nesta fase):**
+- Acesso antecipado ao roadmap e demos
+- Canal direto com o time para priorização (feedback com impacto real)
+- Transparência: métricas do beta, aprendizados e evolução do produto
+
+> Se você quer participar como **Design Partner**, abra uma Issue com o título: **[Design Partner] Nome / Tipo (clínica, telemed, etc.)**.
+
+---
+
+## Roadmap Comercial (para investidores)
+
+Este roadmap traduz a evolução do Health Care em **marcos de valor, tração e monetização**, com métricas sugeridas para acompanhamento.
+
+> Reforço: o Health Care **não faz diagnóstico**, **não prescreve** e **não decide conduta**. O foco é **organizar**, **sumarizar** e **sugerir especialidade** com linguagem segura e guardrails.
+
+### Fase A — MVP de Valor (0 → 1)
+**Objetivo:** provar que o usuário consegue centralizar documentos e obter uma timeline confiável.
+
+**Entregáveis**
+- Upload de PDF/imagem + OCR quando necessário  
+- Timeline e busca/filtros (por tipo, data, tags)  
+- Exportação de resumo para consulta (PDF/JSON)
+
+**Métricas sugeridas**
+- Ativação: % de usuários que sobem ≥ 3 documentos na 1ª semana  
+- Tempo “documento → timeline” (p50/p95)  
+- Qualidade: % de documentos com data + tipo + campos mínimos extraídos  
+- Retenção D7/D30
+
+### Fase B — Recomendação de Especialidade com Guardrails (1 → 10)
+**Objetivo:** aumentar valor percebido com sugestão rastreável e segura.
+
+**Entregáveis**
+- Sugestão de especialidade (regras + IA)  
+- Explicabilidade (“por que sugeriu?”) baseada nos documentos do usuário  
+- Feedback loop (“foi útil?” / “qual especialidade você procurou?”)  
+- Controles de linguagem: não alarmista, sem urgência clínica
+
+**Métricas sugeridas**
+- Adoção da recomendação (% de usuários que visualizam/confirmam)  
+- Taxa de “útil” por recomendação  
+- Taxa de contestação (“não faz sentido”)  
+- Redução do tempo até “decidir o próximo passo” (auto-relato)
+
+### Fase C — Go-to-Market e Monetização Inicial (10 → 100)
+**Objetivo:** validar canal e disposição a pagar.
+
+**Estratégia de packaging (exemplo)**
+- **B2C (assinatura):** organização + timeline + exportação + insights básicos  
+- **B2B2C (clínicas/telemed):** intake pré-consulta + resumo estruturado (sem conduta)
+
+**Métricas sugeridas**
+- Conversão waitlist → cadastro → upload  
+- Conversão free → pago  
+- CAC (teste) e payback (estimado)  
+- NPS / satisfação
+
+### Fase D — Trust & Compliance como vantagem competitiva (100 → 1000)
+**Objetivo:** tornar privacidade/segurança uma alavanca para parcerias.
+
+**Entregáveis**
+- Trilhas de consentimento (escopo/prazo/revogação) + auditoria  
+- Política de retenção/deleção (LGPD-friendly)  
+- Hardening e observabilidade sem PII  
+- Governança de IA (avaliação, logs de decisão, limites)
+
+**Métricas sugeridas**
+- Incidentes (meta: 0) + tempo de resposta (simulado)  
+- % de logs sem PII (meta: 100%)  
+- Taxa de consentimento para compartilhamento com médico  
+- Sucesso em auditorias internas/checklists
+
+### Fase E — Escala, Integrações e Eficiência (1000+)
+**Objetivo:** reduzir fricção e otimizar unit economics por documento.
+
+**Entregáveis**
+- Integrações (laboratórios/telemed) **com consentimento**  
+- Importação automatizada (drive/e-mail) com trilha auditável  
+- Otimização de custos (OCR/IA), fila e reprocessamento  
+- Qualidade contínua (datasets sintéticos/anonimizados, testes de regressão)
+
+**Métricas sugeridas**
+- Custo por documento processado (OCR/IA)  
+- Falhas/reprocessamento (%)  
+- Latência p95 do pipeline  
+- Retenção e expansão (multi-perfil familiar, etc.)
 
 ---
 
