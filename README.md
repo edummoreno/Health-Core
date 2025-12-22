@@ -4,7 +4,7 @@
 O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só lugar e usa IA para **identificar padrões** e **sugerir qual especialista você deve procurar** — **sem diagnóstico** e **sem prescrição**. Segurança e privacidade são o nosso alicerce.
 
 <p align="center">
-  <img src="Data/Image/IA%20Saude.png" alt="Health Care — IA na Saúde" width="520">
+  <img src="Image/IA%20Saude.png" alt="Health Care — IA na Saúde" width="520">
 </p>
 
 [![Status](https://img.shields.io/badge/status-pre--MVP-blue)](#)
