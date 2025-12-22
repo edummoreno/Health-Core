@@ -36,6 +36,15 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
     - [Fase 8 — Confiabilidade, custos e operação](#fase-8--confiabilidade-custos-e-operação)
     - [Próximas fases (pós-MVP)](#próximas-fases-pós-mvp)
   - [Mercado \& Tese](#mercado--tese)
+  - [Pitch (1 frase)](#pitch-1-frase)
+  - [Modelo de Capitalização (do MVP à Plataforma)](#modelo-de-capitalização-do-mvp-à-plataforma)
+    - [Camada 1 — B2C (porta de entrada e recorrência)](#camada-1--b2c-porta-de-entrada-e-recorrência)
+    - [Camada 2 — B2B2C (ticket maior via “pré-consulta”)](#camada-2--b2b2c-ticket-maior-via-pré-consulta)
+    - [Camada 3 — Plataforma (infraestrutura e escala)](#camada-3--plataforma-infraestrutura-e-escala)
+  - [Cenários de Evolução (Conservador, Base e Otimista)](#cenários-de-evolução-conservador-base-e-otimista)
+    - [Cenário 1 — Conservador (B2C forte, crescimento orgânico)](#cenário-1--conservador-b2c-forte-crescimento-orgânico)
+    - [Cenário 2 — Base (B2C + pilotos B2B2C em paralelo)](#cenário-2--base-b2c--pilotos-b2b2c-em-paralelo)
+    - [Cenário 3 — Otimista (B2B2C escala + Plataforma/Integrações)](#cenário-3--otimista-b2b2c-escala--plataformaintegrações)
   - [O que buscamos agora](#o-que-buscamos-agora)
   - [Roadmap Comercial (para investidores)](#roadmap-comercial-para-investidores)
     - [Fase A — MVP de Valor (0 → 1)](#fase-a--mvp-de-valor-0--1)
@@ -232,6 +241,94 @@ Ao optar por compartilhar **dados anonimizados** para treinar/avaliar melhorias 
 - **B2C:** assinatura para organização + timeline + exportações + insights básicos.
 - **B2B2C:** clínicas/telemed com “pré-consulta” (intake) e resumo estruturado para apoiar a consulta.
 - Upsell por recursos premium: múltiplos perfis familiares, armazenamento ampliado, exportações avançadas, integrações.
+
+---
+## Pitch (1 frase)
+
+**Uma plataforma de infraestrutura de dados de saúde centrada no paciente** — que organiza histórico (exames, laudos, alergias, cirurgias), gera uma timeline inteligente e sugere **qual especialidade procurar**, com privacidade por padrão (**sem diagnóstico** e **sem prescrição**).
+
+---
+
+## Modelo de Capitalização (do MVP à Plataforma)
+
+A capitalização do Health Care é pensada em camadas — começamos com valor imediato no B2C e escalamos com B2B2C e plataforma, mantendo o princípio de **dados pertencem ao paciente** e **compartilhamento só com consentimento**.
+
+### Camada 1 — B2C (porta de entrada e recorrência)
+**O que é:** app para o público geral organizar o histórico de saúde e transformar documentos soltos em informação utilizável.  
+**Como monetiza:**
+- **Assinatura (mensal/anual)** com freemium (limites no plano gratuito)
+- **Planos família** (múltiplos perfis)
+- Upsell por conveniência: exportações avançadas, armazenamento, automações
+
+**Por que funciona:** histórico acumulado cria **lock-in** (quanto mais o usuário usa, mais valioso fica).
+
+### Camada 2 — B2B2C (ticket maior via “pré-consulta”)
+**O que é:** módulo para clínicas/telemed/profissionais com **pré-consulta estruturada** e **resumo do histórico** para apoiar atendimento (sem conduta).  
+**Como monetiza:**
+- Licença por profissional/clínica, ou
+- Cobrança por consulta/paciente ativo, ou
+- Pacotes de pilotos (design partners) com contrato recorrente
+
+**Por que funciona:** gera ROI operacional (tempo de consulta + qualidade do contexto clínico).
+
+### Camada 3 — Plataforma (infraestrutura e escala)
+**O que é:** infraestrutura de **ingestão + estruturação + governança/consentimento**, podendo evoluir para integrações e APIs.  
+**Como monetiza:**
+- Modelo **usage-based** (por volume de documentos/processamento)
+- Contratos enterprise (SLA, auditoria, compliance)
+- Integrações com parceiros (sempre com consentimento do paciente)
+
+**Por que funciona:** transforma o Health Care em “camada de confiança” do histórico do paciente — com defensabilidade em privacidade e governança.
+
+> Nota: esta seção descreve **possibilidades estratégicas** do produto completo. Não são projeções financeiras nem promessa de resultados.
+
+---
+
+## Cenários de Evolução (Conservador, Base e Otimista)
+
+Abaixo estão cenários ilustrativos para mostrar **como o Health Care pode se capitalizar ao longo do roadmap**, do MVP ao produto completo.
+
+### Cenário 1 — Conservador (B2C forte, crescimento orgânico)
+**Tese:** crescimento sustentado no público geral, com monetização principalmente por assinatura.  
+**Como capitaliza:**
+- Freemium → Pro (assinatura)
+- Planos família como principal alavanca de ARPU
+- Crescimento via conteúdo, indicação e comunidades
+
+**O que precisa provar (métricas de produto):**
+- Ativação: usuário sobe documentos e volta para consultar/exportar
+- Retenção (D30) crescente conforme a timeline fica “completa”
+- Uso recorrente de exportação para consultas
+
+**Riscos:** CAC pode subir; mitigação via orgânico + referral + parcerias leves.
+
+### Cenário 2 — Base (B2C + pilotos B2B2C em paralelo)
+**Tese:** B2C valida valor e gera volume; B2B2C começa a gerar ticket maior e previsibilidade.  
+**Como capitaliza:**
+- Assinatura B2C como base
+- Pilotos pagos com clínicas/telemed (pré-consulta + resumo)
+- Pacotes recorrentes por volume/assento em parceiros iniciais
+
+**O que precisa provar:**
+- B2C: retenção + adoção do “resumo pré-consulta”
+- B2B2C: redução de tempo de intake / maior satisfação do profissional
+- Repetição do uso em clínicas (recorrência real)
+
+**Riscos:** ciclo de venda B2B2C; mitigação via pilotos curtos e proposta de ROI clara.
+
+### Cenário 3 — Otimista (B2B2C escala + Plataforma/Integrações)
+**Tese:** Health Care vira referência de **histórico estruturado + governança**, escalando via parceiros e integrações.  
+**Como capitaliza:**
+- B2B2C escalado (contratos recorrentes)
+- Integrações e “plugs” (telemed, laboratórios, ecossistema)
+- Plataforma/API com cobrança por uso (documentos/processamento)
+
+**O que precisa provar:**
+- Unit economics positivos (custo por documento controlado vs receita por volume)
+- Segurança/privacidade como diferencial percebido (confiança e auditoria)
+- Escalabilidade operacional (fila, reprocessamento, qualidade contínua)
+
+**Riscos:** maior exigência de compliance e qualidade; mitigação com privacy-by-design desde o início.
 
 ---
 
