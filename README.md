@@ -18,14 +18,7 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
   - [Sumário](#sumário)
   - [Visão em 10 segundos](#visão-em-10-segundos)
   - [O que é o Health Care](#o-que-é-o-health-care)
-  - [Health Core x Health Care (nomenclatura)](#health-core-x-health-care-nomenclatura)
-  - [🔒 Estratégia de Segurança e Repositórios](#-estratégia-de-segurança-e-repositórios)
   - [Diferenciais](#diferenciais)
-  - [O que entregaremos no MVP](#o-que-entregaremos-no-mvp)
-    - [App — Versão Paciente](#app--versão-paciente)
-    - [Painel — Versão Médico (MVP Light)](#painel--versão-médico-mvp-light)
-  - [Privacidade, Ética e IA responsável](#privacidade-ética-e-ia-responsável)
-  - [Comunidade Health Care (opt-in)](#comunidade-health-care-opt-in)
   - [Mercado \& Tese](#mercado--tese)
   - [Pitch (1 frase)](#pitch-1-frase)
   - [Modelo de Capitalização (do MVP à Plataforma)](#modelo-de-capitalização-do-mvp-à-plataforma)
@@ -36,12 +29,19 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
     - [Cenário 1 — Conservador (B2C forte, crescimento orgânico)](#cenário-1--conservador-b2c-forte-crescimento-orgânico)
     - [Cenário 2 — Base (B2C + pilotos B2B2C)](#cenário-2--base-b2c--pilotos-b2b2c)
     - [Cenário 3 — Otimista (B2B2C escala + Plataforma/Integrações)](#cenário-3--otimista-b2b2c-escala--plataformaintegrações)
+  - [Roadmap (para investidores)](#roadmap-para-investidores)
   - [O que buscamos agora](#o-que-buscamos-agora)
+  - [Como falar com a gente](#como-falar-com-a-gente)
   - [Por que o Health Care não compete com ERPs de Saúde ou Plataformas como Laboratórios](#por-que-o-health-care-não-compete-com-erps-de-saúde-ou-plataformas-como-laboratórios)
     - [Health Care ≠ ERP de Saúde (ex.: TOTVS)](#health-care--erp-de-saúde-ex-totvs)
     - [Health Care ≠ plataforma de laboratório (ex.: Dasa)](#health-care--plataforma-de-laboratório-ex-dasa)
     - [Neutralidade como diferencial](#neutralidade-como-diferencial)
-  - [Roadmap (para investidores)](#roadmap-para-investidores)
+  - [O que entregaremos no MVP](#o-que-entregaremos-no-mvp)
+    - [App — Versão Paciente](#app--versão-paciente)
+    - [Painel — Versão Médico (MVP Light)](#painel--versão-médico-mvp-light)
+  - [Privacidade, Ética e IA responsável](#privacidade-ética-e-ia-responsável)
+  - [🔒 Estratégia de Segurança e Repositórios](#-estratégia-de-segurança-e-repositórios)
+  - [Comunidade Health Care (opt-in)](#comunidade-health-care-opt-in)
   - [Roadmap Técnico](#roadmap-técnico)
     - [Fase 0 — Organização do repositório](#fase-0--organização-do-repositório)
     - [Fase 1 — Estrutura Base (Backend + Banco)](#fase-1--estrutura-base-backend--banco)
@@ -53,7 +53,6 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
     - [Fase 7 — Exportação + consentimento](#fase-7--exportação--consentimento)
     - [Fase 8 — Operação (confiabilidade e custos)](#fase-8--operação-confiabilidade-e-custos)
     - [Pós-MVP](#pós-mvp)
-  - [Estrutura do repositório](#estrutura-do-repositório)
 
 ---
 
@@ -70,62 +69,11 @@ O **Health Care** centraliza exames, laudos, cirurgias e alergias em um só luga
 
 ---
 
-## Health Core x Health Care (nomenclatura)
-Você pode ver “**Health Core**” em alguns arquivos (PDFs/white paper) porque foi um **nome anterior do projeto**.  
-O produto e a marca atual são **Health Care**. Estamos padronizando isso aos poucos sem quebrar nomes de arquivos e links existentes.
-
----
-
-## 🔒 Estratégia de Segurança e Repositórios
-Para reduzir risco e evitar exposição de código sensível/segredos, adotamos dois repositórios:
-
-- **Health-Care (este — público):** documentação, White Paper, roadmap e materiais de transparência.
-- **Health-Care-Develop (privado):** desenvolvimento principal (backend, frontend e IA), com controles de acesso.
-
-**Como contribuir**
-- Sugestões, melhorias e bugs: use **Issues** neste repositório público.
-- Contribuições de código: via PR no repositório privado (processo guiado pelos mantenedores).
-
----
-
 ## Diferenciais
 - **Histórico longitudinal** (não só exames isolados).
 - **IA orientada à ação segura**: organizar, sumarizar e sugerir especialidade — sem diagnóstico.
 - **Privacidade por padrão**: dados pertencem ao paciente, com consentimento explícito.
 - **Transparência**: White Paper público de ética, segurança e governança.
-
----
-
-## O que entregaremos no MVP
-
-### App — Versão Paciente
-- Cadastro do histórico (alergias, crônicos, cirurgias, medicamentos).
-- Upload de exame/laudo (PDF/foto) → OCR quando necessário → estruturação básica.
-- Timeline + busca/filtros.
-- Insights seguros (padrões simples) + sugestão de especialidade.
-- Exportação rápida (resumo para consulta).
-
-### Painel — Versão Médico (MVP Light)
-- Acesso **concedido pelo paciente** (revogável, com prazo e escopo).
-- Visão resumida: alergias, crônicos, cirurgias, últimos exames.
-- Sumarização de laudos por IA para facilitar consulta (sem decidir conduta).
-
----
-
-## Privacidade, Ética e IA responsável
-- **Sem venda de dados.**
-- **Sem uso por convênios/seguradoras** para precificação, negação de cobertura ou perfil de risco.
-- Criptografia (em trânsito e em repouso), logs sem PII e trilha de auditoria quando houver compartilhamento.
-- IA com limites claros: linguagem não alarmista, sem urgência clínica, sem diagnóstico/prescrição.
-
----
-
-## Comunidade Health Care (opt-in)
-Modo opcional para compartilhar **dados anonimizados** para avaliar melhorias e qualidade do produto.
-
-- Você entra e sai quando quiser.
-- Nunca compartilhamos dados individuais com convênios/seguradoras para precificação.
-- Avaliamos técnicas como **Federated Learning** e **Differential Privacy** no roadmap.
 
 ---
 
@@ -177,11 +125,43 @@ A monetização evolui em camadas: começamos com valor direto para o público g
 
 ---
 
+## Roadmap (para investidores)
+Marcos de produto e tração — do MVP ao produto completo.
+
+- **Fase A — MVP de Valor (0 → 1):** upload + timeline + exportação pré-consulta.
+- **Fase B — Especialidade com Guardrails (1 → 10):** sugestão rastreável + explicabilidade + feedback loop.
+- **Fase C — Monetização Inicial (10 → 100):** assinatura B2C + pilotos B2B2C (pré-consulta/resumo).
+- **Fase D — Trust & Compliance (100 → 1.000):** auditoria, consentimento, retenção/deleção (LGPD-friendly), governança de IA.
+- **Fase E — Escala e Integrações (1.000+):** integrações e APIs, otimização de custo por documento, eficiência operacional.
+
+---
+
 ## O que buscamos agora
 - **Usuários beta (público geral):** para validar uso real de upload, timeline e exportação.
 - **Design partners (pilotos):** clínicas/telemed interessadas no módulo de pré-consulta e resumo.
 - **Parcerias estratégicas:** integrações futuras (sempre com consentimento).
 - **Investimento (pré-seed/seed):** para acelerar produto, segurança e go-to-market.
+
+---
+
+## Como falar com a gente
+Este repositório é público e é nosso ponto de contato para comunidade, parcerias e investidores.
+
+**Para investidores**
+- Abra uma Issue com o título: **[Investidor] Nome / Firma / Tema**
+- Sugestão de conteúdo: estágio (pré-seed/seed), tese, o que você gostaria de avaliar, e como prefere conversar.
+
+**Para parcerias**
+- Abra uma Issue com o título: **[Parceria] Empresa / Tipo (clínica, telemed, laboratório, healthtech)**
+- Sugestão de conteúdo: objetivo da parceria, contexto, integração desejada e prazos.
+
+**Para beta / comunidade**
+- Abra uma Issue com o título: **[Beta] Quero participar**
+- Conte rapidamente seu perfil (sem dados pessoais sensíveis) e como você pretende usar o produto.
+
+**Importante (privacidade)**
+- **Não publique dados pessoais, exames reais, PDFs ou imagens sensíveis** em Issues.
+- Se precisar descrever um caso, use informações **anonimizadas** e em alto nível.
 
 ---
 
@@ -205,14 +185,48 @@ Não somos laboratório, clínica ou operadora. Isso permite neutralidade, gover
 
 ---
 
-## Roadmap (para investidores)
-Marcos de produto e tração — do MVP ao produto completo.
+## O que entregaremos no MVP
 
-- **Fase A — MVP de Valor (0 → 1):** upload + timeline + exportação pré-consulta.
-- **Fase B — Especialidade com Guardrails (1 → 10):** sugestão rastreável + explicabilidade + feedback loop.
-- **Fase C — Monetização Inicial (10 → 100):** assinatura B2C + pilotos B2B2C (pré-consulta/resumo).
-- **Fase D — Trust & Compliance (100 → 1.000):** auditoria, consentimento, retenção/deleção (LGPD-friendly), governança de IA.
-- **Fase E — Escala e Integrações (1.000+):** integrações e APIs, otimização de custo por documento, eficiência operacional.
+### App — Versão Paciente
+- Cadastro do histórico (alergias, crônicos, cirurgias, medicamentos).
+- Upload de exame/laudo (PDF/foto) → OCR quando necessário → estruturação básica.
+- Timeline + busca/filtros.
+- Insights seguros (padrões simples) + sugestão de especialidade.
+- Exportação rápida (resumo para consulta).
+
+### Painel — Versão Médico (MVP Light)
+- Acesso **concedido pelo paciente** (revogável, com prazo e escopo).
+- Visão resumida: alergias, crônicos, cirurgias, últimos exames.
+- Sumarização de laudos por IA para facilitar consulta (sem decidir conduta).
+
+---
+
+## Privacidade, Ética e IA responsável
+- **Sem venda de dados.**
+- **Sem uso por convênios/seguradoras** para precificação, negação de cobertura ou perfil de risco.
+- Criptografia (em trânsito e em repouso), logs sem PII e trilha de auditoria quando houver compartilhamento.
+- IA com limites claros: linguagem não alarmista, sem urgência clínica, sem diagnóstico/prescrição.
+
+---
+
+## 🔒 Estratégia de Segurança e Repositórios
+Para reduzir risco e evitar exposição de código sensível/segredos, adotamos dois repositórios:
+
+- **Health-Care (este — público):** documentação, White Paper, roadmap e materiais de transparência.
+- **Health-Care-Develop (privado):** desenvolvimento principal (backend, frontend e IA), com controles de acesso.
+
+**Como contribuir**
+- Sugestões, melhorias e bugs: use **Issues** neste repositório público.
+- Contribuições de código: via PR no repositório privado (processo guiado pelos mantenedores).
+
+---
+
+## Comunidade Health Care (opt-in)
+Modo opcional para compartilhar **dados anonimizados** para avaliar melhorias e qualidade do produto.
+
+- Você entra e sai quando quiser.
+- Nunca compartilhamos dados individuais com convênios/seguradoras para precificação.
+- Avaliamos técnicas como **Federated Learning** e **Differential Privacy** no roadmap.
 
 ---
 
@@ -259,30 +273,3 @@ Marcos de produto e tração — do MVP ao produto completo.
 - Importação automatizada, integrações (com consentimento), IA mais rica com explicabilidade e expansão por conformidade local.
 
 **Status atual:** foco em **Fase 1 — Estrutura Base**.
-
----
-
-## Estrutura do repositório
-```text
-C:.
-├── .gitignore
-├── readme.md
-├── tree.txt
-├── backend
-│   ├── main.py
-│   ├── main.txt
-│   └── main.txt.ipynb
-├── conhecimento
-│   ├── conhecimento_bibliotecas.txt
-│   └── primeiros_passos.txt
-├── Data
-│   ├── tree.txt
-│   ├── Docs
-│   │   ├── HealthCore_Escopo_MVP.pdf
-│   │   └── White Paper — Ética, Segurança E Governança _ Health Core (v1.0 – 24_11_2025).pdf
-│   └── Image
-│       └── IA Saude.png
-├── env31210
-│   └── (omitido: ambiente virtual local)
-└── White Paper
-    └── white_paper_etica_seguranca_e_governanca_health_core_v_1_0_24_11_2025.md
