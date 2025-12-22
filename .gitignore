@@ -1,0 +1,111 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# =========================
+# Ambientes Virtuais
+# =========================
+env/
+venv/
+.venv/
+env31210/
+ENV/
+.python-version
+
+# =========================
+# Jupyter / Notebooks
+# =========================
+.ipynb_checkpoints/
+*.ipynb~
+
+# =========================
+# Variáveis de Ambiente / Segredos
+# =========================
+.env
+.env.*
+*.env
+secrets.*
+*.key
+*.pem
+
+# =========================
+# Logs e Artefatos Temporários
+# =========================
+*.log
+logs/
+tmp/
+temp/
+.cache/
+.pytest_cache/
+
+# =========================
+# OCR / Uploads / Arquivos Locais
+# =========================
+uploads/
+data_raw/
+data_processed/
+ocr_output/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.bmp
+
+# ⚠️ Observação:
+# PDFs e imagens oficiais (docs/imagens institucionais)
+# devem ficar versionados apenas em pastas específicas,
+# como Data/Docs e Data/Image.
+
+# =========================
+# IDEs e Editores
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# =========================
+# Sistema Operacional
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Testes / Coverage
+# =========================
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Outros
+# =========================
+node_modules/
+
+# =========================
+# Ignorar apenas TXT gerados automaticamente
+# =========================
+logs/*.txt
+tmp/*.txt
+data_raw/*.txt
+ocr_output/*.txt
+
+git rm -r --cached .
+git add .
+git commit -m "chore: apply .gitignore changes"
+git push
+
