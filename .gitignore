@@ -55,7 +55,7 @@ data_raw/
 data_processed/
 ocr_output/
 *.pdf
-*.png
+#*.png
 #*.jpg
 *.jpeg
 *.tiff
