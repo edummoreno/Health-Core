@@ -1,0 +1,16 @@
+pip install fastapi uvicorn[standard] python-multipart pydantic[email] sqlalchemy
+
+Criar um arquivo main.py assim (primeiro “olá mundo” da API):
+
+from fastapi import FastAPI
+
+app = FastAPI(title="Health Core API")
+
+@app.get("/")
+def read_root():
+    return {"status": "ok", "message": "Health Core API online"}
+
+
+Rodar:
+
+uvicorn main:app --reload

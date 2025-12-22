@@ -1,0 +1,156 @@
+📚 O que faz cada biblioteca?
+⭐ 1. FastAPI
+
+Função: Framework para criar APIs de forma rápida, moderna e muito eficiente.
+
+O que ela traz:
+
+Rotas (@app.get, @app.post, etc.)
+
+Validação automática de dados (usando Pydantic)
+
+Documentação automática em Swagger / Redoc
+→ Acessível em:
+http://localhost:8000/docs
+http://localhost:8000/redoc
+
+Excelente suporte para JSON
+
+Muito usada quando o projeto envolve IA + APIs
+
+Por que é boa?
+
+Fácil de aprender
+
+Muito rápida
+
+Usada por grandes empresas (Uber, Microsoft, etc.)
+
+Integra perfeitamente com Python/IA
+
+⭐ 2. Uvicorn
+
+Função: É o servidor que realmente “roda” o FastAPI.
+
+Explicando melhor:
+
+FastAPI é o framework que cria a API
+
+Uvicorn é o motor/servidor web que executa essa API
+
+Comando clássico:
+
+uvicorn main:app --reload
+
+
+O --reload faz atualizar automaticamente quando você salva o código.
+
+É como o “Node server” para quem usa Express no Node.js.
+
+⭐ 3. python-multipart
+
+Função: Biblioteca que permite lidar com uploads de arquivos.
+
+Exemplos:
+
+Upload de PDFs de exames
+
+Upload de imagens
+
+Upload de documentos em geral
+
+FastAPI precisa dela para interpretar esse tipo:
+
+from fastapi import File, UploadFile
+
+
+Sem essa lib, upload não funciona.
+
+⭐ 4. Pydantic
+
+Função: Biblioteca para validar e estruturar dados.
+
+É ela que garante:
+
+“Esse campo precisa ser e-mail”
+
+“Esse campo é obrigatório”
+
+“Esse dado tem que ser inteiro”
+
+“Essa data precisa ter formato válido”
+
+Exemplo:
+
+from pydantic import BaseModel, EmailStr
+
+class User(BaseModel):
+    email: EmailStr
+    password: str
+
+
+Além disso, o FastAPI usa Pydantic internamente para:
+
+Validar request body
+
+Validar os dados de saída
+
+Criar documentação automática
+
+⭐ 5. SQLAlchemy
+
+Função: ORM (Object Relational Mapper)
+
+Traduzindo:
+
+➡️ Permite trabalhar com banco de dados usando Python, sem escrever SQL na mão.
+Você usa classes Python, e ele converte em tabelas no banco.
+
+Exemplo:
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True)
+    email = Column(String, unique=True)
+
+
+SQLAlchemy cuida de:
+
+Criar tabelas
+
+Atualizar modelos
+
+Inserir, editar, deletar
+
+Fazer consultas no banco (db.query(...))
+
+Funciona com:
+
+SQLite
+
+PostgreSQL
+
+MySQL
+
+SQL Server
+
+MariaDB
+
+etc.
+
+Para você, será muito útil quando começar a guardar:
+
+Histórico de exames
+
+Perfil de saúde
+
+Usuários
+
+Notificações
+
+📌 Resumo rápido (do mais básico ao mais avançado):
+Biblioteca	Para que serve	Você vai usar quando…
+FastAPI	Criar a API (rotas, lógica, validação)	Sempre
+Uvicorn	Servidor para rodar a API	Para iniciar o sistema
+python-multipart	Upload de arquivos (PDF, imagem)	Quando o paciente enviar exames
+Pydantic	Modelagem/validação de dados	Criar schemas de entrada e saída
+SQLAlchemy	Banco de dados via classes Python
