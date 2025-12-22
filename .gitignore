@@ -104,6 +104,7 @@ tmp/*.txt
 data_raw/*.txt
 ocr_output/*.txt
 conhecimento/
+backend/
 
 #git rm -r --cached .
 #git add .
