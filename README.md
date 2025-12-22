@@ -12,20 +12,23 @@ O **Health Core** centraliza exames, laudos, cirurgias e alergias em um só luga
 ---
 
 ## Sumário
-- [Visão em 10 segundos](#visão-em-10-segundos)
-- [Diferenciais](#diferenciais)
-- [O que entregaremos no MVP](#o-que-entregaremos-no-mvp)
-  - [App — Versão Paciente](#app--versão-paciente)
-  - [Painel — Versão Médico (MVP Light)](#painel--versão-médico-mvp-light)
-- [Privacidade, Ética e IA responsável](#privacidade-ética-e-ia-responsável)
-- [Comunidade Health Core (opt-in)](#comunidade-health-core-opt-in)
-- [Roadmap](#roadmap)
-- [Estrutura do repositório](#estrutura-do-repositório)
-- [Materiais e White Paper](#materiais-e-white-paper)
-- [Como contribuir](#como-contribuir)
-- [Contato](#contato)
-- [Aviso importante (sem diagnóstico)](#aviso-importante-sem-diagnóstico)
-- [Licença](#licença)
+- [Health Core](#health-core)
+  - [Sumário](#sumário)
+  - [Visão em 10 segundos](#visão-em-10-segundos)
+  - [Diferenciais](#diferenciais)
+  - [O que entregaremos no MVP](#o-que-entregaremos-no-mvp)
+    - [App — Versão Paciente](#app--versão-paciente)
+    - [Painel — Versão Médico (MVP Light)](#painel--versão-médico-mvp-light)
+  - [Privacidade, Ética e IA responsável](#privacidade-ética-e-ia-responsável)
+  - [Comunidade Health Core (opt-in)](#comunidade-health-core-opt-in)
+  - [Roadmap](#roadmap)
+  - [Estrutura do repositório](#estrutura-do-repositório)
+  - [Materiais e White Paper](#materiais-e-white-paper)
+  - [Como contribuir](#como-contribuir)
+    - [Diretrizes iniciais](#diretrizes-iniciais)
+  - [Contato](#contato)
+  - [Aviso importante (sem diagnóstico)](#aviso-importante-sem-diagnóstico)
+  - [Licença](#licença)
 
 ---
 
