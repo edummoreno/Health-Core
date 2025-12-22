@@ -104,8 +104,8 @@ tmp/*.txt
 data_raw/*.txt
 ocr_output/*.txt
 
-git rm -r --cached .
-git add .
-git commit -m "chore: apply .gitignore changes"
-git push
+#git rm -r --cached .
+#git add .
+#git commit -m "chore: apply .gitignore changes"
+#git push
 
